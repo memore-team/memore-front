@@ -68,7 +68,7 @@ html {
 body {
   min-height: 100vh;
   word-wrap: break-word;
-  font-family: 'PT Sans', Helvetica, Arial, YuGothic, 'Kozuka Gothic std', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif;
 }
 a {
   color: inherit;
@@ -114,16 +114,13 @@ input:-webkit-autofill {
 //  App
 //-------------------------------------*/
 
-.wrapper { min-height: 100vh; }
+.container { min-height: 100vh; }
 
-.header {
-
-}
 .header__icon { padding: 5px 10px; }
 .header__info { font-size: 0; }
 .header__info__prof {
   display: inline-block;
-  padding: 10px 5px;
+  padding: 10px 0;
   vertical-align: top;
 }
 .header__info__prof__txt {
@@ -144,14 +141,68 @@ input:-webkit-autofill {
   vertical-align: top;
 }
 
+.wrapper {
+  display: table;
+  width: 100%;
+  height: calc(100vh - 51px);
+}
+
+.notebook {
+  display: table-cell;
+  width: 200px;
+  height: 100%;
+}
+.notebook__title {
+  padding: 20px;
+  font-size: 2.0rem;
+}
+.notebook__list > li {
+  position: relative;
+  padding: 10px 60px 10px 20px;
+  font-size: 1.4rem;
+}
+.notebook__num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+.memos {
+  display: table-cell;
+  width: 200px;
+  height: 100%;
+}
+
+.memo {
+  display: table-cell;
+  height: 100%;
+}
+
 /*-------------------------------------//
 //  Theme
 //-------------------------------------*/
 
-.dark {
+.dark.container {
   background-color: #2D2D2D;
   color: #fff;
 }
 .dark .header { border-bottom: 1px solid #383838; }
 .dark .header__info__icon { fill: #8E8E8E }
 .dark .header__info__prof__txt { color: #BCBCBC; }
+.dark .notebook {
+  border-right: 1px solid #383838;
+  background-color: #2D2D2D;
+  color: #8F8F8F;
+}
+.dark .notebook__title { color: #ddd; }
+.dark .notebook__list > li:hover { background-color: red; }
+.dark .memos {
+  border-right: 1px solid #383838;
+  background-color: #212121;
+}
+.dark .memo {
+  background-color: #181818;
+}
