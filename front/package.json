@@ -1,0 +1,22 @@
+{
+  "name": "memore",
+  "version": "1.0.0",
+  "description": "The simple memo application",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabeliwo/memore.git"
+  },
+  "author": "nabeliwo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabeliwo/memore/issues"
+  },
+  "homepage": "https://github.com/nabeliwo/memore#readme"
+}
