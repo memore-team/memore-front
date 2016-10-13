@@ -148,6 +148,7 @@ input:-webkit-autofill {
 }
 
 .notebook {
+  position: relative;
   display: table-cell;
   width: 200px;
   height: 100%;
@@ -169,8 +170,39 @@ input:-webkit-autofill {
   padding: 10px 20px;
   text-align: right;
 }
+.add {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.notebook__add { background-color: #007bb5; }
+.memos__add { background-color: #00ADB5; }
+.add::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  margin: -10px 0 0 -1px;
+  background-color: #fff;
+  content: "";
+}
+.add::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  margin: -1px 0 0 -10px;
+  background-color: #fff;
+  content: "";
+}
 
 .memos {
+  position: relative;
   display: table-cell;
   width: 200px;
   height: 100%;
@@ -198,7 +230,10 @@ input:-webkit-autofill {
   color: #8F8F8F;
 }
 .dark .notebook__title { color: #ddd; }
-.dark .notebook__list > li:hover { background-color: red; }
+.dark .notebook__list > li:hover {
+  background-color: #ddd;
+  color: #222;
+}
 .dark .memos {
   border-right: 1px solid #383838;
   background-color: #212121;
