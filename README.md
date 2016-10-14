@@ -19,6 +19,7 @@ memore is simple memo tool.
 - [ ] Create a design
 - [ ] Add memo function
 - [ ] Add notebook
+- [ ] notebook in notebook
 - [ ] Add Tag
 - [ ] Add function of sorting memo
 - [ ] Add function of searching memo
