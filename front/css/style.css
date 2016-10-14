@@ -148,12 +148,42 @@ input:-webkit-autofill {
 }
 
 .notebook {
-  position: relative;
   display: table-cell;
   width: 240px;
   height: 100%;
-  padding-top: 10px;
+  vertical-align: top;
 }
+.notebook__info { padding: 20px 15px 10px; }
+
+.notebook__info__back {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/arrow.png);
+  background-size: 100% 100%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.notebook__info__folder {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: url(../img/close_white.png) no-repeat center center #2f8ed2;
+  background-size: 18px auto;
+  vertical-align: middle;
+}
+.notebook__info__file {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: url(../img/file_white.png) no-repeat center center #2f8ed2;
+  background-size: 16px auto;
+  vertical-align: middle;
+}
+
 .notebook__list > li {
   position: relative;
   padding: 10px 60px 10px 50px;
@@ -198,6 +228,14 @@ input:-webkit-autofill {
   background-size: 100% auto;
   content: "";
 }
+.notebook__sub__num {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  width: 60px;
+  padding: 10px 20px;
+  text-align: right;
+}
 
 
 .add {
@@ -209,7 +247,7 @@ input:-webkit-autofill {
   border-radius: 50%;
 }
 .notebook__add { background-color: #007bb5; }
-.memos__add { background-color: #00ADB5; }
+.search__add { background-color: #00ADB5; }
 .add::before {
   position: absolute;
   top: 50%;
@@ -231,16 +269,53 @@ input:-webkit-autofill {
   content: "";
 }
 
-.memos {
+.search {
   position: relative;
   display: table-cell;
-  width: 200px;
+  width: 240px;
   height: 100%;
+  color: #8F8F8F;
+  vertical-align: top;
+}
+.search__head {
+  padding: 20px;
+}
+.search__head__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #383838;
+  color: #8F8F8F;
+}
+.search__result {
+  padding: 0 20px 20px;
+  font-size: 1.3rem;
+}
+.search__list {
+  padding: 0 20px;
+  font-size: 1.4rem;
+}
+.search__list > li {
+  position: relative;
+  padding-left: 30px;
+  padding: 10px 0 10px 30px;
+  font-size: 1.4rem;
+}
+.search__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/file.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
 }
 
 .memo {
   display: table-cell;
   height: 100%;
+  vertical-align: top;
 }
 
 /*-------------------------------------//
@@ -263,7 +338,7 @@ input:-webkit-autofill {
   background-color: #ddd;
   color: #222;
 }*/
-.dark .memos {
+.dark .search {
   border-right: 1px solid #383838;
   background-color: #212121;
 }
