@@ -150,17 +150,28 @@ input:-webkit-autofill {
 .notebook {
   position: relative;
   display: table-cell;
-  width: 200px;
+  width: 240px;
   height: 100%;
-}
-.notebook__title {
-  padding: 20px;
-  font-size: 2.0rem;
+  padding-top: 10px;
 }
 .notebook__list > li {
   position: relative;
-  padding: 10px 60px 10px 20px;
+  padding: 10px 60px 10px 50px;
   font-size: 1.4rem;
+}
+.notebook__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+.notebook__list > .is-open::before {
+  background-image: url(../img/open.png);
 }
 .notebook__num {
   position: absolute;
@@ -170,6 +181,25 @@ input:-webkit-autofill {
   padding: 10px 20px;
   text-align: right;
 }
+.notebook__sub__list > li {
+  position: relative;
+  padding-left: 30px;
+  padding: 10px 0 10px 30px;
+  font-size: 1.4rem;
+}
+.notebook__sub__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+
+
 .add {
   position: absolute;
   bottom: 20px;
@@ -229,11 +259,10 @@ input:-webkit-autofill {
   background-color: #2D2D2D;
   color: #8F8F8F;
 }
-.dark .notebook__title { color: #ddd; }
-.dark .notebook__list > li:hover {
+/*.dark .notebook__list > li:hover {
   background-color: #ddd;
   color: #222;
-}
+}*/
 .dark .memos {
   border-right: 1px solid #383838;
   background-color: #212121;
