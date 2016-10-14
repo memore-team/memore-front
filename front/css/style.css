@@ -348,7 +348,62 @@ input:-webkit-autofill {
   -webkit-flex: 1;
   flex: 1;
   height: 100%;
+  padding: 20px;
   vertical-align: top;
+}
+.memo__head {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.memo__head__folder {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.memo__head__folder::before {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  margin-right: 5px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: -2px;
+}
+.memo__head__tag {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+.memo__head__tag::before {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background: url(../img/tag.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: -2px;
+}
+
+.memo__date {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.memo__date__txt {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.memo__title {
+  padding: 20px 0 15px;
+  font-size: 2.0rem;
+  border-bottom: 1px solid #383838;
+}
+.memo__txt {
+  width: 100%;
+  padding: 20px 0;
+  height: calc(100vh - 51px - 40px - 32px - 34px - 56px);
+  font-size: 1.4rem;
+  resize: none;
 }
 
 /*-------------------------------------//
@@ -377,4 +432,5 @@ input:-webkit-autofill {
 }
 .dark .memo {
   background-color: #181818;
+  color: #8F8F8F;
 }
