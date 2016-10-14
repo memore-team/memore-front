@@ -49,55 +49,67 @@
 
   <div class="wrapper">
     <div class="notebook">
-      <div class="notebook__info">
-        <a class="notebook__info__back" href=""></a>
-        <a class="notebook__info__folder" href=""></a>
-        <a class="notebook__info__file" href=""></a>
+      <div class="notebook__inner">
+        <div class="notebook__info">
+          <a class="notebook__info__folder" href=""></a>
+          <a class="notebook__info__file" href=""></a>
+          <a class="notebook__info__back" href=""></a>
+        </div>
+
+        <ul class="notebook__list">
+          <li class="is-open" style="padding-bottom: 0;">
+            <p style="margin-bottom: 10px;">Work</p>
+            <p class="notebook__num">10</p>
+            <ul class="notebook__sub__list">
+              <li>
+                <p>ほげほげほげ</p>
+                <p class="notebook__sub__num">5</p>
+              </li>
+              <li>
+                <p>ふがふがふが</p>
+                <p class="notebook__sub__num">7</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Project</p>
+            <p class="notebook__num">1</p>
+          </li>
+          <li>
+            <p>Download</p>
+            <p class="notebook__num">3</p>
+          </li>
+          <li>
+            <p>ほげほげほげ</p>
+            <p class="notebook__num">20</p>
+          </li>
+        </ul>
       </div>
 
-      <ul class="notebook__list">
-        <li class="is-open" style="padding-bottom: 0;">
-          <p style="margin-bottom: 10px;">Work</p>
-          <p class="notebook__num">10</p>
-          <ul class="notebook__sub__list">
-            <li>
-              <p>ほげほげほげ</p>
-              <p class="notebook__sub__num">5</p>
-            </li>
-            <li>
-              <p>ふがふがふが</p>
-              <p class="notebook__sub__num">7</p>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <p>Project</p>
-          <p class="notebook__num">1</p>
-        </li>
-        <li>
-          <p>Download</p>
-          <p class="notebook__num">3</p>
-        </li>
-        <li>
-          <p>ほげほげほげ</p>
-          <p class="notebook__num">20</p>
-        </li>
-      </ul>
+      <div class="notebook__icon"></div>
     </div>
 
     <div class="search">
-      <div class="search__head">
-        <input class="search__head__input" type="text" placeholder="Search by keyword, title or #tag...">
+      <div class="search__inner">
+        <div class="notebook__info" style="padding-top: 25px;">
+          <a class="notebook__info__back" href=""></a>
+        </div>
+
+        <div class="search__head">
+          <input class="search__head__input" type="text" placeholder="Search by keyword, title or #tag...">
+        </div>
+
+        <p class="search__result">Result: 10 files...</p>
+
+        <ul class="search__list">
+          <li>ほげほ</li>
+          <li>ふがみ</li>
+          <li>File File</li>
+          <li>Dictionary</li>
+        </ul>
       </div>
 
-      <p class="search__result">Result: 10 files...</p>
-
-      <ul class="search__list">
-        <li>ほげほ</li>
-        <li>ふがみ</li>
-        <li>File File</li>
-        <li>Dictionary</li>
-      </ul>
+      <div class="search__icon"></div>
     </div>
 
     <div class="memo"></div>

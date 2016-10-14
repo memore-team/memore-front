@@ -142,26 +142,43 @@ input:-webkit-autofill {
 }
 
 .wrapper {
-  display: table;
+  display: flex;
   width: 100%;
   height: calc(100vh - 51px);
 }
 
 .notebook {
-  display: table-cell;
+  position: relative;
   width: 240px;
   height: 100%;
   vertical-align: top;
 }
-.notebook__info { padding: 20px 15px 10px; }
+.notebook__inner { overflow: hidden; }
+.notebook.is-hidden { width: 5px; }
+.notebook.is-hidden .notebook__icon {
+  z-index: 10;
+  position: absolute;
+  top: 5px;
+  right: -35px;
+  width: 35px;
+  height: 30px;
+  border: 1px solid #383838;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  background: url(../img/close.png) no-repeat #2D2D2D center right 5px;
+  background-size: 20px auto;
+}
 
+.notebook__info {
+  padding: 20px 20px 10px;
+  text-align: right;
+}
 .notebook__info__back {
   display: inline-block;
   width: 20px;
   height: 20px;
   background-image: url(../img/arrow.png);
   background-size: 100% 100%;
-  margin-right: 15px;
   vertical-align: middle;
 }
 .notebook__info__folder {
@@ -178,6 +195,7 @@ input:-webkit-autofill {
   display: inline-block;
   width: 30px;
   height: 30px;
+  margin-right: 15px;
   border-radius: 50%;
   background: url(../img/file_white.png) no-repeat center center #2f8ed2;
   background-size: 16px auto;
@@ -271,14 +289,28 @@ input:-webkit-autofill {
 
 .search {
   position: relative;
-  display: table-cell;
   width: 240px;
   height: 100%;
   color: #8F8F8F;
   vertical-align: top;
 }
+.search.is-hidden { width: 5px; }
+.search__inner { overflow: hidden; }
+.search.is-hidden .search__icon {
+  z-index: 10;
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #383838;
+  border-left: 0;
+  background: url(../img/search.png) no-repeat #212121 center right 9px;
+  background-size: 15px auto;
+}
 .search__head {
-  padding: 20px;
+  padding: 10px 20px 20px;
 }
 .search__head__input {
   width: 100%;
@@ -313,7 +345,8 @@ input:-webkit-autofill {
 }
 
 .memo {
-  display: table-cell;
+  -webkit-flex: 1;
+  flex: 1;
   height: 100%;
   vertical-align: top;
 }
