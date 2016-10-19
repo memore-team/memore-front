@@ -15,7 +15,12 @@ class App extends Component {
       light: themeLight
     };
     this.state = {
-      theme: 'dark'
+      theme: 'dark',
+      user: {
+        id: 1,
+        name: 'nabeliwo',
+        thumb_path: '/img/favicon.png'
+      }
     };
   }
 
@@ -25,7 +30,7 @@ class App extends Component {
 
     return (
       <div className={`${styles.container} ${theme.root}`}>
-        <Header themeName={themeName} theme={theme} />
+        <Header themeName={themeName} theme={theme} user={this.state.user} />
       </div>
     );
   }

@@ -1,16 +1,14 @@
 import React, { PropTypes } from 'react';
 
-import {
-  LogoDark,
-  LogoLight,
-} from '../../partial/Icon/Logo';
+import { LogoDark, LogoLight } from '../../partial/Icon/Logo';
 import Gear from '../../partial/Icon/Gear';
 import Button from '../../partial/Button/Button';
+import User from '../../partial/User/User';
 
 import styles from './Header.css';
 import utility from '../../../styles/utility.css';
 
-const Header = ({ themeName, theme }) => {
+const Header = ({ themeName, theme, user }) => {
   const logo = themeName === 'light' ? <LogoLight /> : <LogoDark />;
 
   return (
@@ -21,6 +19,10 @@ const Header = ({ themeName, theme }) => {
 
       <div className={`${styles.header__cell} ${utility.r}`}>
         <div className={styles.header__info}>
+          <div className={styles.header__info__prof}>
+            <User user={user} theme={theme} />
+          </div>
+
           <div className={styles.header__btn}>
             <Button>
               <Gear extend={theme.icon} />
@@ -34,7 +36,8 @@ const Header = ({ themeName, theme }) => {
 
 Header.propTypes = {
   themeName: PropTypes.string.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
 };
 
 export default Header;

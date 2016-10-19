@@ -1,0 +1,13 @@
+.wrapper { display: inline-block; }
+.name {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.thumb {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  vertical-align: middle;
+}

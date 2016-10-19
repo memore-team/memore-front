@@ -1,5 +1,6 @@
-.root { color: var(--dark-font-color); }
-.icon { fill: #8E8E8E; }
+.root { color: #8F8F8F; }
+.accentFont { color: #BCBCBC; }
+.icon { fill: #8F8F8F; }
 .header {
   border-bottom: 1px solid #383838;
   background-color: #2D2D2D;

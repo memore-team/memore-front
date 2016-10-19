@@ -15,6 +15,11 @@
   display: inline-block;
   font-size: 0;
 }
+.header__info__prof {
+  display: inline-block;
+  padding: 10px 0;
+  vertical-align: middle;
+}
 .header__btn {
   display: inline-block;
   padding: 15px;
