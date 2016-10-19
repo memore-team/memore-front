@@ -1,0 +1,321 @@
+
+/*-------------------------------------//
+//  App
+//-------------------------------------*/
+
+
+
+.header__icon { padding: 5px 10px; }
+.header__info { font-size: 0; }
+.header__info__prof {
+  display: inline-block;
+  padding: 10px 0;
+  vertical-align: top;
+}
+.header__info__prof__txt {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.header__info__prof__img {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.header__info__edit {
+  display: inline-block;
+  padding: 15px;
+  vertical-align: top;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 51px);
+}
+
+.notebook {
+  position: relative;
+  width: 240px;
+  height: 100%;
+  vertical-align: top;
+}
+.notebook__inner { overflow: hidden; }
+.notebook.is-hidden { width: 5px; }
+.notebook.is-hidden .notebook__icon {
+  z-index: 10;
+  position: absolute;
+  top: 5px;
+  right: -35px;
+  width: 35px;
+  height: 30px;
+  border: 1px solid #383838;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  background: url(../img/close.png) no-repeat #2D2D2D center right 5px;
+  background-size: 20px auto;
+}
+
+.notebook__info {
+  padding: 20px 20px 10px;
+  text-align: right;
+}
+.notebook__info__back {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/arrow.png);
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+.notebook__info__folder {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: url(../img/close_white.png) no-repeat center center #2f8ed2;
+  background-size: 18px auto;
+  vertical-align: middle;
+}
+.notebook__info__file {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: url(../img/file_white.png) no-repeat center center #2f8ed2;
+  background-size: 16px auto;
+  vertical-align: middle;
+}
+
+.notebook__list > li {
+  position: relative;
+  padding: 10px 60px 10px 50px;
+  font-size: 1.4rem;
+}
+.notebook__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+.notebook__list > .is-open::before {
+  background-image: url(../img/open.png);
+}
+.notebook__num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  padding: 10px 20px;
+  text-align: right;
+}
+.notebook__sub__list > li {
+  position: relative;
+  padding-left: 30px;
+  padding: 10px 0 10px 30px;
+  font-size: 1.4rem;
+}
+.notebook__sub__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+.notebook__sub__num {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  width: 60px;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+
+.add {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.notebook__add { background-color: #007bb5; }
+.search__add { background-color: #00ADB5; }
+.add::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  margin: -10px 0 0 -1px;
+  background-color: #fff;
+  content: "";
+}
+.add::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  margin: -1px 0 0 -10px;
+  background-color: #fff;
+  content: "";
+}
+
+.search {
+  position: relative;
+  width: 240px;
+  height: 100%;
+  color: #8F8F8F;
+  vertical-align: top;
+}
+.search.is-hidden { width: 5px; }
+.search__inner { overflow: hidden; }
+.search.is-hidden .search__icon {
+  z-index: 10;
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #383838;
+  border-left: 0;
+  background: url(../img/search.png) no-repeat #212121 center right 9px;
+  background-size: 15px auto;
+}
+.search__head {
+  padding: 10px 20px 20px;
+}
+.search__head__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #383838;
+  color: #8F8F8F;
+}
+.search__result {
+  padding: 0 20px 20px;
+  font-size: 1.3rem;
+}
+.search__list {
+  padding: 0 20px;
+  font-size: 1.4rem;
+}
+.search__list > li {
+  position: relative;
+  padding-left: 30px;
+  padding: 10px 0 10px 30px;
+  font-size: 1.4rem;
+}
+.search__list > li::before {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/file.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+
+.memo {
+  -webkit-flex: 1;
+  flex: 1;
+  height: 100%;
+  padding: 20px;
+  vertical-align: top;
+}
+.memo__head {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.memo__head__folder {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.memo__head__folder::before {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  margin-right: 5px;
+  background: url(../img/close.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: -2px;
+}
+.memo__head__tag {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+.memo__head__tag::before {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background: url(../img/tag.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: -2px;
+}
+
+.memo__date {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.memo__date__txt {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.memo__title {
+  padding: 20px 0 15px;
+  font-size: 2.0rem;
+  border-bottom: 1px solid #383838;
+}
+.memo__txt {
+  width: 100%;
+  padding: 20px 0;
+  height: calc(100vh - 51px - 40px - 32px - 34px - 56px);
+  font-size: 1.4rem;
+  resize: none;
+}
+
+/*-------------------------------------//
+//  Theme
+//-------------------------------------*/
+
+
+.dark .header__info__icon { fill: #8E8E8E }
+.dark .header__info__prof__txt { color: #BCBCBC; }
+.dark .notebook {
+  border-right: 1px solid #383838;
+  background-color: #2D2D2D;
+  color: #8F8F8F;
+}
+/*.dark .notebook__list > li:hover {
+  background-color: #ddd;
+  color: #222;
+}*/
+.dark .search {
+  border-right: 1px solid #383838;
+  background-color: #212121;
+}
+.dark .memo {
+  background-color: #181818;
+  color: #8F8F8F;
+}

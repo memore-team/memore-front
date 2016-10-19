@@ -1,0 +1,22 @@
+.header {
+  display: table;
+  width: 100%;
+}
+.header__cell {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+.header__logo {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.header__info {
+  display: inline-block;
+  font-size: 0;
+}
+.header__btn {
+  display: inline-block;
+  padding: 15px;
+  vertical-align: middle;
+}

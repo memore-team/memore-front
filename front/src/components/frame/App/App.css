@@ -1,7 +1,1 @@
-.hoge {
-  color: red;
-}
-
-:global h1 {
-  background-color: black;
-}
+.container { min-height: 100vh; }
