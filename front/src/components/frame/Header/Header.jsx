@@ -24,7 +24,7 @@ const Header = ({ themeName, theme, user }) => {
           </div>
 
           <div className={styles.header__btn}>
-            <Button>
+            <Button extend={utility.f0}>
               <Gear extend={theme.icon} />
             </Button>
           </div>

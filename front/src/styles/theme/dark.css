@@ -5,3 +5,12 @@
   border-bottom: 1px solid #383838;
   background-color: #2D2D2D;
 }
+.side {
+  border-right: 1px solid #383838;
+  background-color: #2D2D2D;
+}
+.middle {
+  border-right: 1px solid #383838;
+  background-color: #212121;
+}
+.main { background-color: #181818; }
