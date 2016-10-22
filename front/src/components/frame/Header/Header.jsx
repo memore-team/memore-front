@@ -13,17 +13,17 @@ const Header = ({ themeName, theme, user }) => {
 
   return (
     <header className={`${styles.header} ${theme.header}`}>
-      <div className={`${styles.header__cell} ${utility.l}`}>
-        <div className={styles.header__logo}>{logo}</div>
+      <div className={`${styles.cell} ${utility.l}`}>
+        <div className={styles.logo}>{logo}</div>
       </div>
 
-      <div className={`${styles.header__cell} ${utility.r}`}>
-        <div className={styles.header__info}>
-          <div className={styles.header__info__prof}>
+      <div className={`${styles.cell} ${utility.r}`}>
+        <div className={styles.info}>
+          <div className={styles.info__prof}>
             <User user={user} theme={theme} />
           </div>
 
-          <div className={styles.header__btn}>
+          <div className={styles.btn}>
             <Button extend={utility.f0}>
               <Gear extend={theme.icon} />
             </Button>

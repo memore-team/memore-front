@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import styles from './Side.css';
 
 const Side = ({ theme }) => (
-  <div className={`${styles.side} ${theme.side}`}>sidehoge-</div>
+  <div className={`${styles.wrapper} ${theme.side}`}>sidehoge-</div>
 );
 
 Side.propTypes = {

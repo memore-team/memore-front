@@ -1,0 +1,23 @@
+.wrapper { display: inline-block; }
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+.tag {
+  width: 16px;
+  height: 16px;
+}
+.list { display: inline-block; }
+.list > li {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.list > li:not(:first-child) { padding-left: 20px; }
+.list > li:not(:first-child)::before {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  content: "＞";
+}

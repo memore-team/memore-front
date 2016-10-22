@@ -1,6 +1,14 @@
-.main {
+.wrapper {
   flex: 1;
   height: 100%;
   padding: 20px;
   vertical-align: top;
 }
+.date,
+.info {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.date > *:not(:first-child),
+.info > *:not(:first-child) { margin-left: 20px; }
+.title { margin-bottom: 20px; }
