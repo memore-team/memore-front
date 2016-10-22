@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/nabeliwo/memore#readme",
   "dependencies": {
+    "flux": "^3.1.0",
+    "npm-run-all": "^3.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
@@ -46,7 +48,6 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "livereactload": "^3.0.1",
-    "npm-run-all": "^3.1.1",
     "react-proxy": "^1.1.8",
     "uglifyify": "^3.0.4",
     "watchify": "^3.7.0"

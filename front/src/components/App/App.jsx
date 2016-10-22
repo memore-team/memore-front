@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
-import Header from '../Header/Header';
-import Container from '../Container/Container';
-import Side from '../Side/Side';
-import Middle from '../Middle/Middle';
-import Main from '../Main/Main';
+import { Dispatcher } from 'flux';
+import Store from '../../Store';
+
+import Header from '../frame/Header/Header';
+import Container from '../frame/Container/Container';
+import Side from '../frame/Side/Side';
+import Middle from '../frame/Middle/Middle';
+import Main from '../frame/Main/Main';
 
 import styles from './App.css';
-import themeDark from '../../../styles/theme/dark.css';
-import themeLight from '../../../styles/theme/light.css';
+import themeDark from '../../styles/theme/dark.css';
+import themeLight from '../../styles/theme/light.css';
+
+const dispatcher = new Dispatcher();
+const store = new Store(dispatcher);
 
 class App extends Component {
   constructor(...args) {
@@ -18,17 +24,17 @@ class App extends Component {
       dark: themeDark,
       light: themeLight
     };
-    this.state = {
-      theme: 'dark',
-      user: {
-        id: 1,
-        name: 'nabeliwo',
-        thumb_path: '/img/favicon.png'
-      }
-    };
+  }
+
+  componentWillMount() {
+    this.state = store.getState();
   }
 
   render() {
+    if (!this.state) {
+      return <div className={styles.wrapper} />;
+    }
+
     const themeName = this.state.theme;
     const theme = this.theme[themeName];
 
