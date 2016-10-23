@@ -15,19 +15,23 @@ import themeLight from '../../styles/theme/light.css';
 
 const dispatcher = new Dispatcher();
 const store = new Store(dispatcher);
+const themes = {
+  dark: themeDark,
+  light: themeLight
+};
 
 class App extends Component {
   constructor(...args) {
     super(...args);
 
-    this.theme = {
-      dark: themeDark,
-      light: themeLight
-    };
+    this.state = null;
   }
 
   componentWillMount() {
-    this.state = store.getState();
+    store.getState()
+    .then((state) => {
+      this.setState(state);
+    });
   }
 
   render() {
@@ -36,7 +40,7 @@ class App extends Component {
     }
 
     const themeName = this.state.theme;
-    const theme = this.theme[themeName];
+    const theme = themes[themeName];
 
     return (
       <div className={`${styles.wrapper} ${theme.root}`}>
@@ -45,7 +49,7 @@ class App extends Component {
         <Container theme={theme}>
           <Side theme={theme} />
           <Middle theme={theme} />
-          <Main theme={theme} />
+          <Main memo={this.state.memo} theme={theme} />
         </Container>
       </div>
     );

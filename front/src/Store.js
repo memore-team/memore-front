@@ -41,6 +41,7 @@ export default class Store extends Dispatcher {
           }
         ],
         title: 'これははじめての投稿テストです',
+        content: 'いよっしゃあああああああああああああああああああああああ',
         created_at: '2016/10/10 22:32:32',
         updated_at: '2016/10/12 20:12:50'
       }
@@ -48,6 +49,10 @@ export default class Store extends Dispatcher {
   }
 
   getState() {
-    return this.state;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(this.state);
+      }, 0);
+    });
   }
 }
