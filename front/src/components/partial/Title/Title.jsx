@@ -12,10 +12,25 @@ function changeHeight(e) {
   textAreaEl.style.height = `${lineNum * LINE_HEIGHT}px`;
 }
 
+function observeResize(e) {
+  let timerID = null;
+
+  window.addEventListener('resize', () => {
+    if (timerID) {
+      clearTimeout(timerID);
+    }
+
+    timerID = setTimeout(() => {
+      changeHeight(e);
+    }, 300);
+  });
+}
+
 class Title extends Component {
   componentDidMount() {
-    textAreaEl = document.getElementById('js-textarea');
+    textAreaEl = document.getElementById('js-title');
     changeHeight({ target: textAreaEl });
+    observeResize({ target: textAreaEl });
   }
 
   render() {
@@ -24,7 +39,7 @@ class Title extends Component {
     return (
       <div className={`${styles.title} ${theme.title}`}>
         <textarea
-          id="js-textarea"
+          id="js-title"
           style={{ lineHeight: `${LINE_HEIGHT}px` }}
           className={styles.text}
           defaultValue={value}

@@ -3,5 +3,6 @@
   display: block;
   width: 100%;
   font-size: 2.0rem;
+  word-break: break-all;
   resize: none;
 }
