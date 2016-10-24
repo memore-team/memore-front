@@ -12,8 +12,10 @@
   "scripts": {
     "dev": "npm-run-all -p start watch",
     "start": "browser-sync start --server './'",
-    "watch": "watchify -v -d src/app.jsx --extension=jsx -t babelify -p livereactload -p [css-modulesify --after autoprefixer --autoprefixer.browsers 'last 2 versions' -o dist/bundle.css] -o dist/bundle.js",
-    "build": "browserify src/app.jsx --extension=jsx -t babelify -p [css-modulesify --after autoprefixer --autoprefixer.browsers 'last 2 versions' --after cssnano -o dist/bundle.css] -g uglifyify -o dist/bundle.js",
+    "watch": "watchify -v -d src/javascripts/app.jsx --extension=jsx -t babelify -p livereactload -p [css-modulesify --after autoprefixer --autoprefixer.browsers 'last 2 versions' -o dist/bundle.css] -o dist/bundle.js",
+    "bundle": "browserify src/javascripts/app.jsx --extension=jsx -t babelify -p [css-modulesify --after autoprefixer --autoprefixer.browsers 'last 2 versions' --after cssnano -o dist/bundle.css] -g uglifyify -o dist/bundle.js",
+    "imagemin": "imagemin src/images/* -o dist/images",
+    "build": "npm-run-all -p imagemin bundle",
     "lint": "eslint --ext .js,.jsx ./"
   },
   "repository": {

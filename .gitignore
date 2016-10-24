@@ -15,7 +15,9 @@ pids
 logs
 results
 build
-front/dist
+dist/bundle.js
+dist/bundle.css
+dist/images
 
 node_modules
 .DS_Store

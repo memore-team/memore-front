@@ -6,7 +6,7 @@ import Button from '../../partial/Button/Button';
 import User from '../../partial/User/User';
 
 import styles from './Header.css';
-import utility from '../../../../styles/utility.css';
+import utility from '../../../../stylesheets/utility.css';
 
 const Header = ({ themeName, theme, user }) => {
   const logo = themeName === 'light' ? <LogoLight /> : <LogoDark />;

@@ -9,8 +9,8 @@ import Middle from '../frame/Middle/Middle';
 import Main from '../frame/Main/Main';
 
 import styles from './App.css';
-import themeDark from '../../../styles/theme/dark.css';
-import themeLight from '../../../styles/theme/light.css';
+import themeDark from '../../../stylesheets/theme/dark.css';
+import themeLight from '../../../stylesheets/theme/light.css';
 
 const themes = {
   dark: themeDark,
