@@ -9,6 +9,7 @@
   margin-bottom: 20px;
   font-size: 0;
 }
+.info { display: flex; }
 .date > *:not(:first-child),
 .info > *:not(:first-child) { margin-left: 20px; }
 .title { margin-bottom: 20px; }

@@ -1,23 +1,36 @@
-.wrapper { display: inline-block; }
+.wrapper {
+  display: flex;
+  flex: 1;
+  vertical-align: middle;
+}
 .icon {
   display: inline-block;
   margin-right: 8px;
-  vertical-align: -3px;
 }
 .tag {
   width: 16px;
   height: 16px;
 }
-.list { display: inline-block; }
-.list > li {
+.box {
+  flex: 1;
   position: relative;
-  display: inline-block;
-  font-size: 1.2rem;
 }
-.list > li:not(:first-child) { padding-left: 20px; }
-.list > li:not(:first-child)::before {
+.list {
   position: absolute;
   top: 0;
-  left: 4px;
-  content: "＞";
+  left: 0;
+  width: 100%;
+}
+.list > .label:not(:first-child) { margin-left: .34rem; }
+.label {
+  display: inline-block;
+  border-radius: 3px;
+  color: transparent;
+  font-size: 1.2rem;
+  line-height: 16px;
+}
+.input {
+  position: relative;
+  width: 100%;
+  font-size: 1.2rem;
 }

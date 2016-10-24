@@ -1,4 +1,4 @@
-.wrapper { display: inline-block; }
+.wrapper { vertical-align: middle; }
 .icon {
   display: inline-block;
   margin-right: 8px;

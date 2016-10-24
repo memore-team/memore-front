@@ -14,4 +14,12 @@
   background-color: #212121;
 }
 .main { background-color: #181818; }
+
+.tagInput:placeholder-shown { color: #505050; }
+.tagInput::-webkit-input-placeholder { color: #505050; }
+.tagInput:-moz-placeholder { color: #505050; }
+.tagInput::-moz-placeholder { color: #505050; }
+.tagInput:-ms-input-placeholder { color: #505050; }
+
+.tagLabel { box-shadow: 0 0 0 .5px #8F8F8F; }
 .title { border-bottom: 1px solid #383838; }

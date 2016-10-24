@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import { Dispatcher } from 'flux';
-import Store from '../../Store';
+import store from '../../store/';
 
 import Header from '../frame/Header/Header';
 import Container from '../frame/Container/Container';
@@ -10,11 +9,9 @@ import Middle from '../frame/Middle/Middle';
 import Main from '../frame/Main/Main';
 
 import styles from './App.css';
-import themeDark from '../../styles/theme/dark.css';
-import themeLight from '../../styles/theme/light.css';
+import themeDark from '../../../styles/theme/dark.css';
+import themeLight from '../../../styles/theme/light.css';
 
-const dispatcher = new Dispatcher();
-const store = new Store(dispatcher);
 const themes = {
   dark: themeDark,
   light: themeLight

@@ -1,22 +1,47 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
+import action from '../../../actions/memo';
 import TagIcon from '../Icon/Tag';
 
 import styles from './Tag.css';
 
-const Tag = ({ tags, theme }) => (
-  <div className={styles.wrapper}>
-    <div className={styles.icon}>
-      <TagIcon extend={`${styles.tag} ${theme.icon}`} />
-    </div>
+class Tag extends Component {
+  constructor(...args) {
+    super(...args);
 
-    <ul className={styles.list}>
-      {tags.map(item => (
-        <li key={item.id}>{item.name}</li>
-      ))}
-    </ul>
-  </div>
-);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    action.changeTag(e.target.value);
+  }
+
+  render() {
+    const { tags, theme } = this.props;
+
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.icon}>
+          <TagIcon extend={`${styles.tag} ${theme.icon}`} />
+        </div>
+
+        <div className={styles.box}>
+          <div className={styles.list}>
+            {tags.map(tag => <span key={tag.id} className={`${styles.label} ${theme.tagLabel}`}>{tag.name}</span>)}
+          </div>
+
+          <input
+            type="text"
+            className={`${styles.input} ${theme.tagInput}`}
+            placeholder="Enter the tags separated by spaces."
+            defaultValue={tags.map(tag => tag.name).join(' ')}
+            onChange={this.handleChange}
+          />
+        </div>
+      </div>
+    );
+  }
+}
 
 Tag.propTypes = {
   tags: PropTypes.array.isRequired,
