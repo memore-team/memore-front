@@ -16,7 +16,7 @@ memore is simple memo tool.
 
 ## todo
 
-- [ ] Create a design
+- [x] Create a design
 - [ ] Add memo function
 - [ ] Add notebook
 - [ ] notebook in notebook
